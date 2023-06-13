@@ -1,0 +1,23 @@
+{
+    "name": "mysql-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+        "tasks.max": "1",
+        "database.hostname": "src-mysql",
+        "database.port": "3306",
+        "database.user": "root",
+        "database.password": "root",
+        "database.server.id": "184054",
+        "database.server.name": "dbserver1",
+        "database.include.list": "src_db",
+        "database.history.kafka.bootstrap.servers": "kafka:29092",
+        "database.history.kafka.topic": "schema-changes.db",
+        "schema.history.internal.kafka.bootstrap.servers": "kafka:29092",
+        "schema.history.internal.kafka.topic": "schema-changes.db",
+        "include.schema.changes": "true",
+        "topic.creation.default.replication.factor" : 1,
+        "table.whitelist": "src_db.bitcoin",
+        "topic.prefix": "debezium-connector",
+        "topic.creation.default.partitions": 1
+    }
+}
